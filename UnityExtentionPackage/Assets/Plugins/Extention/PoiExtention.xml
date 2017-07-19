@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PoiExtention</name>
+    </assembly>
+    <members>
+        <member name="T:System.ByteArrayExtention">
+            <summary>
+            字节数据扩展
+            </summary>
+        </member>
+        <member name="M:System.ByteArrayExtention.StartWithBOM(System.Byte[])">
+            <summary>
+            这个数组是不是以BOM头开始的
+            </summary>
+            <param name="buffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ByteArrayExtention.SkipBOMIfHave(System.Byte[])">
+            <summary>
+            如果含有BOM头则去掉，不含有返回原数组
+            </summary>
+            <param name="buffer"></param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Collections.Generic.DictionaryExtention">
+            <summary>
+            字典扩展
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.DictionaryExtention.RemoveInForeach``2(System.Collections.Generic.IDictionary{``0,``1},``0)">
+            <summary>
+            通过线程池异步移除一个元素
+            </summary>
+            <typeparam name="K"></typeparam>
+            <typeparam name="V"></typeparam>
+            <param name="idic"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:System.Collections.Generic.DictionaryExtention.AddInForeach``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean)">
+            <summary>
+            通过线程池异步添加一个元素
+            </summary>
+            <typeparam name="K"></typeparam>
+            <typeparam name="V"></typeparam>
+            <param name="idic"></param>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="overlay">如果含有Key，当overlay=true，覆盖当前值，当overlay=false，放弃当前add</param>
+        </member>
+        <member name="M:System.Collections.Generic.DictionaryExtention.ExchangeTo``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})">
+            <summary>
+            交换引用
+            </summary>
+            <typeparam name="K"></typeparam>
+            <typeparam name="V"></typeparam>
+            <param name="idic"></param>
+            <param name="idic2"></param>
+        </member>
+        <member name="M:System.Collections.Generic.DictionaryExtention.Exchange``2(System.Collections.Generic.Dictionary{``0,``1}@,System.Collections.Generic.Dictionary{``0,``1}@)">
+            <summary>
+            交换引用
+            </summary>
+            <typeparam name="K"></typeparam>
+            <typeparam name="V"></typeparam>
+            <param name="idic"></param>
+            <param name="idic2"></param>
+        </member>
+        <member name="T:System.Collections.Generic.ICollection_T_Extention">
+            <summary>
+            集合容器扩展（主要用于List）
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.ICollection_T_Extention.RemoveInForeach``1(System.Collections.Generic.ICollection{``0},``0)">
+            <summary>
+            通过线程池异步移除一个元素
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ic"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:System.Collections.Generic.ICollection_T_Extention.AddInForeach``1(System.Collections.Generic.ICollection{``0},``0)">
+            <summary>
+            通过线程池异步添加一个元素
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ic"></param>
+            <param name="item"></param>
+        </member>
+        <member name="T:System.EnumExtention">
+            <summary>
+            对枚举类的扩展
+            </summary>
+        </member>
+        <member name="M:System.EnumExtention.CheckFlags``1">
+            <summary>
+            检查是否有FlagsAttribute
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtention.Contain``1(``0,``0)">
+            <summary>
+            检查枚举值中是否包含另一个枚举值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="original">通常我们所使用的组标志</param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtention.AddEnum``1(``0,``0)">
+            <summary>
+            在枚举值中添加一个另一个值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="original"></param>
+            <param name="target"></param>
+            <returns>返回组合枚举值</returns>
+        </member>
+        <member name="M:System.EnumExtention.RemoveEnum``1(``0,``0)">
+            <summary>
+            在枚举值中移除一个另一个值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="original"></param>
+            <param name="target"></param>
+            <returns>返回组合枚举值</returns>
+        </member>
+        <member name="M:System.EnumExtention.Add``1(``0@,``0)">
+            <summary>
+            在枚举值中添加一个另一个值,会改变original自身的值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="original">通常我们所使用的组标志</param>
+            <param name="target"></param>
+        </member>
+        <member name="M:System.EnumExtention.Remove``1(``0@,``0)">
+            <summary>
+            在枚举值中移除一个另一个值,会改变original自身的值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="original">通常我们所使用的组标志</param>
+            <param name="target"></param>
+        </member>
+        <member name="T:System.ScreenHelper">
+            <summary>
+            屏幕助手
+            </summary>
+        </member>
+        <member name="T:System.ScreenHelper.DEVMODE">
+            <summary>
+            屏幕参数
+            </summary>
+        </member>
+        <member name="M:System.ScreenHelper.ChangeRes(System.Int32,System.Int32)">
+            <summary>
+            改变屏幕分辨率
+            </summary>
+            <param name="Width"></param>
+            <param name="Height"></param>
+        </member>
+        <member name="T:System.Net.IPAddressExtention">
+            <summary>
+            IPAddressExtention
+            </summary>
+        </member>
+        <member name="M:System.Net.IPAddressExtention.GetIntPart(System.Net.IPAddress)">
+            <summary>
+            取得IP的各个部分
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Net.IPAddressExtention.GetStringParts(System.Net.IPAddress)">
+            <summary>
+            取得IP的各个部分
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Net.IPAddressExtention.IsA(System.Net.IPAddress)">
+            <summary>
+            是不是A类地址
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Net.IPAddressExtention.IsB(System.Net.IPAddress)">
+            <summary>
+            是不是B类地址
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Net.IPAddressExtention.IsC(System.Net.IPAddress)">
+            <summary>
+            是不是C类地址
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Net.IPAddressExtention.IsD(System.Net.IPAddress)">
+            <summary>
+            是不是D类地址（多点广播）
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Net.IPAddressExtention.IsE(System.Net.IPAddress)">
+            <summary>
+            是不是E类地址（广播）
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Net.IPAddressExtention.IsLocalAddress(System.Net.IPAddress)">
+            <summary>
+            判断地址是不是局域网地址
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Net.IPAddressExtention.GetIP(System.Boolean)">
+            <summary>
+            取得IP
+            <para>true取得局域网IP，flase取得外网IP，默认值为flase</para>
+            </summary>
+            <param name="IsLAN">true取得局域网IP，flase取得外网IP，默认值为flase</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.StringExtention">
+            <summary>
+            string扩展
+            </summary>
+        </member>
+        <member name="M:System.StringExtention.Split(System.String,System.Int32,System.Boolean)">
+            <summary>
+            按指定长度分割字符串
+            </summary>
+            <param name="s"></param>
+            <param name="perLength">每段长度</param>
+            <param name="allowLastOneShortCount">是够允许最后一段长度小于每段长度，
+            如果为false，不足的末尾将被舍弃。默认为false。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.StringExtention.ToInt(System.String)">
+            <summary>
+            使用int.Parse转换一个字符串
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.StringExtention.ToEnum``1(System.String)">
+            <summary>
+            将一个字符串转换成枚举
+            </summary>
+            <typeparam name="T">提供一个枚举类型</typeparam>
+            <param name="value"></param>
+            <returns>返回对应的枚举值</returns>
+            <exception cref="T:System.ArgumentException">所给泛型不是枚举</exception>
+        </member>
+        <member name="M:System.StringExtention.ToBool(System.String)">
+            <summary>
+            将string转换成bool。
+            <para>当值为"true""TRUE""True"之一时返回true，否则返回false。</para>
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.StringExtention.Encipher(System.String,System.Int32)">
+            <summary>
+            对字符串进行轻量的加密，使用Decrypt方法解密
+            </summary>
+            <param name="original"></param>
+            <param name="Seed">种子</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.StringExtention.Decrypt(System.String,System.Int32)">
+            <summary>
+            解密密文
+            </summary>
+            <param name="ciphertext"></param>
+            <param name="Seed">种子</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.StructExtention">
+            <summary>
+            值扩展
+            </summary>
+        </member>
+        <member name="M:System.StructExtention.ClampIn``1(``0,``0,``0)">
+            <summary>
+            返回不出界的一个值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="cur"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Xml.Linq.XMLExtention">
+            <summary>
+            对xml.linq的扩展
+            </summary>
+        </member>
+        <member name="M:System.Xml.Linq.XMLExtention.AutoFullPropertiesByAttribute``1(System.Xml.Linq.XElement,``0)">
+            <summary>
+            自动填充属性。将xml元素的属性自动赋值给目标的属性
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="_cfg"></param>
+            <param name="_instance">要填充的目标实例。静态字段参数可为null</param>
+        </member>
+        <member name="M:System.Xml.Linq.XMLExtention.AutoFullPropertiesByElement``1(System.Xml.Linq.XElement,``0)">
+            <summary>
+            自动填充属性。将xml元素的第一个同名子元素的值自动赋值给目标的属性
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="_cfg"></param>
+            <param name="_instance">要填充的目标实例。静态字段参数可为null</param>
+        </member>
+        <member name="T:Poi.Axial">
+            <summary>
+            轴向
+            </summary>
+        </member>
+        <member name="T:Poi.ControlMode">
+            <summary>
+            控制模式
+            </summary>
+        </member>
+        <member name="F:Poi.ControlMode.Lazy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Poi.ControlMode.Greedy">
+            <summary>
+            贪婪模式
+            </summary>
+        </member>
+        <member name="T:Poi.Language">
+            <summary>
+            语言种类
+            </summary>
+        </member>
+        <member name="F:Poi.Language.Chinese">
+            <summary>
+            汉语
+            </summary>
+        </member>
+        <member name="F:Poi.Language.English">
+            <summary>
+            英语
+            </summary>
+        </member>
+        <member name="F:Poi.Language.Japanese">
+            <summary>
+            日语
+            </summary>
+        </member>
+        <member name="F:Poi.Language.Russian">
+            <summary>
+            俄语
+            </summary>
+        </member>
+        <member name="F:Poi.Language.German">
+            <summary>
+            德语
+            </summary>
+        </member>
+        <member name="F:Poi.Language.French">
+            <summary>
+            法语
+            </summary>
+        </member>
+        <member name="F:Poi.Language.Hangul">
+            <summary>
+            韩语
+            </summary>
+        </member>
+        <member name="F:Poi.Language.Undefined1">
+            <summary>
+            未定义语言1
+            </summary>
+        </member>
+        <member name="F:Poi.Language.Undefined2">
+            <summary>
+            未定义语言2
+            </summary>
+        </member>
+        <member name="F:Poi.Language.Undefined3">
+            <summary>
+            未定义语言3
+            </summary>
+        </member>
+        <member name="T:Poi.LeftOrRight">
+            <summary>
+            左右
+            </summary>
+        </member>
+        <member name="T:Poi.LineMode">
+            <summary>
+            联机模式
+            </summary>
+        </member>
+        <member name="F:Poi.LineMode.Single">
+            <summary>
+            单机模式
+            </summary>
+        </member>
+        <member name="F:Poi.LineMode.Online">
+            <summary>
+            在线
+            </summary>
+        </member>
+        <member name="F:Poi.LineMode.Offline">
+            <summary>
+            离线
+            </summary>
+        </member>
+        <member name="F:Poi.LineMode.LAN">
+            <summary>
+            局域网
+            </summary>
+        </member>
+        <member name="T:Poi.Only">
+            <summary>
+            是不是唯一的
+            </summary>
+        </member>
+        <member name="T:Poi.PluginState">
+            <summary>
+            插件状态
+            </summary>
+        </member>
+        <member name="F:Poi.PluginState.Null">
+            <summary>
+            插件为空
+            </summary>
+        </member>
+        <member name="F:Poi.PluginState.Initing">
+            <summary>
+            正在初始化
+            </summary>
+        </member>
+        <member name="F:Poi.PluginState.InitErrorAndStop">
+            <summary>
+            初始化失败已停止工作
+            </summary>
+        </member>
+        <member name="F:Poi.PluginState.InitErrorAndReIniting">
+            <summary>
+            初始化失败正在重试
+            </summary>
+        </member>
+        <member name="F:Poi.PluginState.InitFinish">
+            <summary>
+            初始化完成
+            </summary>
+        </member>
+        <member name="F:Poi.PluginState.Open">
+            <summary>
+            开启
+            </summary>
+        </member>
+        <member name="F:Poi.PluginState.Close">
+            <summary>
+            关闭
+            </summary>
+        </member>
+        <member name="F:Poi.PluginState.Dispose">
+            <summary>
+            已释放
+            </summary>
+        </member>
+        <member name="T:Poi.ID">
+            <summary>
+            线程安全的全局ID
+            </summary>
+        </member>
+        <member name="M:Poi.ID.GetGlobalID(System.Int32)">
+            <summary>
+            取得一个全局的ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Poi.NotInitException">
+            <summary>
+            未初始化异常
+            </summary>
+        </member>
+        <member name="T:Poi.Threshold">
+            <summary>
+            阈
+            </summary>
+        </member>
+        <member name="F:Poi.Threshold.Upper">
+            <summary>
+            上界
+            </summary>
+        </member>
+        <member name="F:Poi.Threshold.Lower">
+            <summary>
+            下界
+            </summary>
+        </member>
+        <member name="M:Poi.Threshold.#ctor(System.Single,System.Single)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="l">下界</param>
+            <param name="u">上界</param>
+        </member>
+        <member name="M:Poi.Threshold.IsInValue(System.Single,System.Int32,System.Int32)">
+            <summary>
+            是不是在界限内
+            </summary>
+            <param name="v">现有值</param>
+            <param name="args">调整幅度</param>
+            <param name="level">调整级别</param>
+            <returns>return v >= (Lower - args * level) || v 小于= (Upper + args * level);</returns>
+        </member>
+        <member name="M:Poi.Threshold.IsLessLower(System.Single,System.Int32,System.Int32)">
+            <summary>
+            是否小于下界
+            </summary>
+            <param name="v"></param>
+            <param name="args"></param>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Poi.Threshold.IsGreaterUpper(System.Single,System.Int32,System.Int32)">
+            <summary>
+            是否大于上界
+            </summary>
+            <param name="v"></param>
+            <param name="args"></param>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Poi.UtilTime">
+            <summary>
+            计时（服务器用）
+            </summary>
+        </member>
+        <member name="P:Poi.UtilTime.DeltaTime">
+            <summary>
+            上一个时间间隔长度（毫秒）
+            </summary>
+        </member>
+        <member name="P:Poi.UtilTime.TotalMilliseconds">
+            <summary>
+            获取以整毫秒数和毫秒的小数部分表示的当前 System.TimeSpan 结构的值。
+            </summary>
+        </member>
+        <member name="M:Poi.UtilTime.Update">
+            <summary>
+            更新时间间隔
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Poi.Writing">
+            <summary>
+            <para>多语言文本查询。</para>
+            <para>创建XML为每个text指定一个ID号并配置多种语言，方便翻译和扩展。</para>
+            <para>初始化Text需要遵从示例的格式</para>
+            <pare>使用CreatTemlate方法在指定路径下创建一个XML模版。文件名默认为：TranslatorText。</pare>
+            <para>Interpreter</para>
+            <para>XML specify an ID number for each text is created and configured in multiple languages to facilitate translation and expansion.</para>
+            <para>Initializes the Text needs to follow the example format</para>
+            <pare>Under the specified path using the CreatTemlate method to create an XML template. File name will default to: TranslatorText.</pare>
+            </summary>
+        </member>
+        <member name="P:Poi.Writing.CurrentLanguage">
+            <summary>
+            当前使用的语言
+            </summary>
+        </member>
+        <member name="M:Poi.Writing.Init(System.Xml.Linq.XElement,Poi.Language)">
+            <summary>
+            初始化方法
+            </summary>
+            <param name="textXML">指定xml</param>
+            <param name="language">设定从xml中加载的语言</param>
+        </member>
+        <member name="M:Poi.Writing.CreatTemlate(System.String,System.String)">
+            <summary>
+            创建一个xml模版，初始化Text需要遵从这个示例的格式
+            </summary>
+            <param name="xmlPath">指定一个路径</param>
+            <param name="fileName">指定文件名字，需要.xml后缀</param>
+        </member>
+        <member name="T:Poi.ILabel">
+            <summary>
+            标签，含有ID和Name
+            </summary>
+        </member>
+        <member name="T:Poi.Label">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Poi.Label.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:Poi.Label.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+    </members>
+</doc>
