@@ -263,3 +263,5 @@ UnityExtentionPackage/Library/
 UnityExtentionPackage/UnityExtentionPackage.sln
 UnityExtentionPackage/Assembly-CSharp-firstpass.csproj
 UnityExtentionPackage/UnityExtentionPackage.Plugins.csproj
+UnityExtentionPackage/Temp/
+UnityExtentionPackage/UnityExtentionPackage.Editor.Plugins.csproj
