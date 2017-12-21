@@ -8,7 +8,7 @@ namespace UnityEngine
     /// <summary>
     /// 物体跟随
     /// </summary>
-    public class FollowTarget:MonoBehaviour
+    public class FollowTarget_1 : MonoBehaviour
     {
         [SerializeField]
         private Transform tar;
@@ -109,15 +109,4 @@ namespace UnityEngine
             return (UpdateType & t) == t;
         }
     }
-}
-
-/// <summary>
-/// 刷新类型
-/// </summary>
-[Flags]
-public enum UpdateType
-{
-    Update = 0x1,
-    LateUpdate = 0x2,
-    FixedUpdate = 0x4,
 }
