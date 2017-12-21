@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class TestButton : MonoBehaviour
+public class TempButton : MonoBehaviour
 {
 
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
